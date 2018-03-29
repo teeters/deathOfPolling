@@ -1,0 +1,30 @@
+About this design:
+
+Since this article talks about the process of statistical sampling and its
+power and limitations, I thought it would be a good idea to visualize the
+sampling process. I wrote a function called draw_sample which takes in data
+about a population broken down by party affiliation, race, and gender
+(visualized as color bars, icons, and icon colors), and draws a representation
+of the population scaled to fit the user's screen. Like-colored icons are grouped
+together to improve visual scanning speed.
+
+Positioning:
+
+I decided to put the visualizations in a vertical column to the right of the
+article to convey a timeline-like effect. I use simple, bold arrows to indicate
+drawing a sample from a larger population. When the article discusses the fluctuating
+polls prior to the election, I create a series of samples showing how dramatic
+the change is.
+
+About the data:
+
+I did my best to make my representations of the US population as accurate as possible.
+All of my demographics come from real data compiled by the Pew research center
+(see code comments for a link). My samples accurately show the demographic breakdown
+of each party. Their only inaccuracy is that they do not correlate icon shape with icon
+color. If the Republicans are 60% male, for example, the model assumes that this ratio
+is true for both black Republicans and white Republicans and draws icons accordingly.
+In reality, most female Republicans are white. Luckily, this discrepancy should only
+be noticeable at much larger sample sizes than the model generates.
+
+For the best effect, view the visualization page in Chrome in a large window.
